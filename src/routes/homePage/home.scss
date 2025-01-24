@@ -1,0 +1,99 @@
+@import "../../responsive.scss";
+
+.home {
+    display: flex;
+    height: 100%;
+
+    .textContainer {
+        flex: 3;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+
+        .wrapper {
+            padding-right: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+            height: 100%;
+
+            @include md{
+                padding: 0;
+            }
+
+            @include sm{
+                justify-content: flex-start;
+
+            }
+
+            .title {
+                font-size: 60px;
+                color: darkgreen;
+                display: flex;
+
+                @include lg {
+                    font-size: 48px;
+                }
+                @include sm {
+                    font-size: 30px;
+                }
+            }
+
+            .description{
+                text-align: justify;
+                @include sm {
+                    font-size: 20px;
+                    width: 80vw;
+                    text-align: justify;
+                }
+            }
+
+            .status {
+                display: flex;
+                justify-content: space-around;
+
+                @include sm {
+                    display: none;
+                }
+
+                span{
+                    font-size: 20px;
+                    font-weight: normal;
+                }
+                h2{
+                    font-size: 25px;
+                    font-weight: bolder;
+
+                    @include lg {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .imgContainer {
+        display: flex;
+        align-items: center;
+        flex: 2;
+
+        @include md {
+            display: none;
+        }
+
+        @include sm {
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 80%;
+
+            @include lg {
+                width: 105%;
+            }
+        }
+    }
+}
